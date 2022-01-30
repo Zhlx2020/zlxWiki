@@ -15,7 +15,7 @@ public class TestController {
      * restful /hello/10
      */
 //    @RequestMapping("/hello") // requestmapping 支持所有的请求方式 get也行 post也行
-    @Value("${test.hello}")
+    @Value("${test.hello:i love you}")
     public String testHello;
 
     @GetMapping("/hello")
