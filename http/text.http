@@ -18,7 +18,12 @@ Content-Type: application/x-www-form-urlencoded
 name=zlx
 
 ###
-GET http://localhost:8800/list
+GET http://localhost:8800/test/list
+Accept: application/json
+
+###
+
+GET http://localhost:8800/demo/list
 Accept: application/json
 
 ###

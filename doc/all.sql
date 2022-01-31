@@ -13,4 +13,6 @@ create table `demo` (
     primary key (`id`)
 );
 
-insert into demo (id, name) values (0, 'wxy')
+insert into demo (id, name) values
+                                   (0, 'wxy'),
+                                   (1, 'zlx');
