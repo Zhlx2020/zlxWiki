@@ -1,6 +1,7 @@
 package com.zlx.wiki.controller;
 
-import com.zlx.wiki.config.CommonResp;
+import com.zlx.wiki.req.EbookReq;
+import com.zlx.wiki.resp.CommonResp;
 import com.zlx.wiki.entity.Ebook;
 import com.zlx.wiki.service.EbookService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,9 +19,9 @@ public class EbookController {
     private EbookService ebookService;
 
     @GetMapping("/list")
-    public CommonResp<List<Ebook>> list(){
+    public CommonResp<List<Ebook>> list(EbookReq ebookReq){
         CommonResp<List<Ebook>> commonResp = new CommonResp<>();
-        List<Ebook> list = ebookService.list();
+        List<Ebook> list = ebookService.list(ebookReq);
 
         if (!list.isEmpty()) {
             commonResp.setContent(list);

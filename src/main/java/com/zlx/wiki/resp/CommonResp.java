@@ -1,4 +1,4 @@
-package com.zlx.wiki.config;
+package com.zlx.wiki.resp;
 
 public class CommonResp<T> {
     // 成功或者失败
